@@ -40,7 +40,7 @@ jobs:
       uses: rtCamp/action-slack-notify@v2.0.2
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
-        SLACK_CHANNEL: ci
+        SLACK_CHANNEL: general
         SLACK_TITLE: Test Success
         SLACK_COLOR: good
 
@@ -49,6 +49,6 @@ jobs:
       if: failure()
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
-        SLACK_CHANNEL: ci
+        SLACK_CHANNEL: general
         SLACK_TITLE: Test Failure
         SLACK_COLOR: danger
